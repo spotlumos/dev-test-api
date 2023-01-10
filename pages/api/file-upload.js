@@ -11,6 +11,12 @@ const firebaseConfig = {
   appId: process.env.APP_ID,
 };
 
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
+
 export default (req, res) => {
   const firebaseApps = getApps();
   if (!firebaseApps.length) {
